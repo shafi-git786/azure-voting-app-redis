@@ -18,11 +18,12 @@ jobs:
         id: build-push-acr
         uses: azure/acr-build@v1
         with:
-          service_principal: ${{ secrets.service_principal }}
-          service_principal_password: ${{ secrets.service_principal_password }}
-          tenant: ${{ secrets.tenant }}
-          registry: ${{ secrets.registry }}
-          repository: ${{ secrets.repository }}
+#           service_principal: ${{ secrets.service_principal }}
+#           service_principal_password: ${{ secrets.service_principal_password }}
+#           tenant: ${{ secrets.tenant }}
+#           registry: ${{ secrets.registry }}
+#           repository: ${{ secrets.repository }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           image:  azure-vote-front
           folder: azure-vote
           branch: master
